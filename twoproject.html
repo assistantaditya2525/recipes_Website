@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            /* min-height: 810px; */
+            /* min-width: 980px; */
+            background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(176, 229, 208, 1) 42%, rgba(12, 192, 253, 0.41) 93.6%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 400px;
+            height: 600px;
+            background-color: white;
+            border-radius: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+
+
+        }
+
+        .card img {
+            width: 100%;
+            height: 30%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+
+        }
+
+        .textbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            width: 70%;
+            text-align: center;
+        }
+
+
+        button {
+            width: 80%;
+            height: 9%;
+            background-color: #03033f;
+            font-size: 1.3rem;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0px 3px 4px black;
+            cursor: pointer;
+        }
+
+        #Canclebox {
+            font-size: large;
+            color: rgb(86, 83, 83);
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #amountbox {
+            width: 80%;
+            height: 10%;
+            border-radius: 10px;
+            background-color: #d5eded;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            padding-left: 20px;
+            cursor: pointer;
+
+        }
+
+        #left {
+            display: flex;
+            /* width: fit-content; */
+            gap: 15px;
+            align-items: center;
+            height: 100%;
+
+        }
+        /* #text{
+            padding: 6px;
+           margin-top:5px;
+        } */
+        #image img {
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 60px;
+            /* padding: 6px;
+
+            justify-content: center;
+            align-items: center; */
+        }
+        /* .right {
+           padding: 16px;
+           margin-top: 4px;
+           
+        } */
+        @media (max-width:340px) {
+            #amountbox {
+                flex-direction: column;
+                height: 20%;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+        }
+
+        @media (min-width:641px) {
+            #amountbox {
+                flex-direction: row;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card">
+            <img src="Oip.jpg" alt="">
+            <div class="textbox">
+                <h2>Order Detail</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non quos labore voluptates distinctio dolor
+                    excepturi perferendis, odit sit veniam impedit.</p>
+            </div>
+            <div id="amountbox">
+                <!-- leftbox -->
+                <div id="left">
+                    <div id="image">
+                        <img src="text.jpg" alt="">
+
+                    </div>
+                    <div id="text">
+                        <p>Amount</p>
+                        <p>$99.9/year</p>
+
+                    </div>
+
+                </div>
+                <!-- rightbox -->
+                <div class="right">
+                    <a href="#">Change</a>
+                </div>
+
+
+            </div>
+            <button id="payment">Proceed To payment</button>
+            <p id="Canclebox">Cancle Order</p>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
